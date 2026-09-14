@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8ec">
+  <title>Toolbox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="scene3d" aria-hidden="true"></canvas>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Toolbox home">
+      <span class="brand-mark">+</span>
+      <span>toolbox</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#features">Tools</a>
+      <a href="#about">About</a>
+      <button class="theme-toggle" id="themeToggle" type="button" title="Toggle theme" aria-label="Toggle theme" aria-pressed="false">◑</button>
+    </nav>
+  </header>
+
+  <nav class="breadcrumbs shell" aria-label="Breadcrumb">
+    <a href="#top">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="#features" class="current" id="breadcrumbCurrent">Tools</a>
+    <span class="breadcrumb-status" id="breadcrumbStatus" aria-live="polite">Ready</span>
+  </nav>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> a few useful tools</p>
+        <h1 id="heroTitle"></h1>
+        <p class="hero-sub">A timer, a to do list, quick notes, and a few simple converters. The small stuff, kept in one place.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#features">See the tools <span>↓</span></a>
+          <span class="quiet-note">saved in this browser</span>
+        </div>
+      </div>
+      <div class="hero-aside" aria-label="Toolbox summary">
+        <div class="aside-card aside-card-main">
+          <span class="aside-label">Your toolbox</span>
+          <strong>Open a tool.<br>Get it done.</strong>
+          <span class="aside-line"></span>
+          <small>Seven handy things, no setup.</small>
+        </div>
+        <div class="hero-stamp">local<br><b>only</b></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="features">
+      <div class="section-intro" data-reveal>
+        <div>
+          <p class="eyebrow">Tools</p>
+          <h2>Pick one<br>to begin.</h2>
+        </div>
+        <p class="section-description">Use a tool, close it, and carry on. No account or tour required.</p>
+      </div>
+
+      <div class="features">
+        <div class="feature-card feature-card-large" data-modal="timer" data-reveal>
+          <div class="card-top"><span class="card-number">01</span><span class="card-arrow">↗</span></div>
+          <div class="feature-icon icon-timer">◷</div>
+          <h3>Focus timer</h3>
+          <p>Set a little time aside and stay with one thing.</p>
+          <span class="card-tag">Productivity</span>
+        </div>
+        <div class="feature-card" data-modal="tasks" data-reveal>
+          <div class="card-top"><span class="card-number">02</span><span class="card-arrow">↗</span></div>
+          <div class="feature-icon icon-tasks">✓</div>
+          <h3>Tasks</h3>
+          <p>A simple list for what needs doing.</p>
+          <span class="card-tag">Organize</span>
+        </div>
+        <div class="feature-card" data-modal="notes" data-reveal>
+          <div class="card-top"><span class="card-number">03</span><span class="card-arrow">↗</span></div>
+          <div class="feature-icon icon-notes">▤</div>
+          <h3>Notes</h3>
+          <p>Write it down before it gets away.</p>
+          <span class="card-tag">Write</span>
+        </div>
+        <div class="feature-card" data-modal="password" data-reveal>
+          <div class="card-top"><span class="card-number">04</span><span class="card-arrow">↗</span></div>
+          <div class="feature-icon icon-password">⌁</div>
+          <h3>Passwords</h3>
+          <p>Make a strong one when you need it.</p>
+          <span class="card-tag">Security</span>
+        </div>
+        <div class="feature-card" data-modal="converter" data-reveal>
+          <div class="card-top"><span class="card-number">05</span><span class="card-arrow">↗</span></div>
+          <div class="feature-icon icon-converter">⇄</div>
+          <h3>Converter</h3>
+          <p>Lengths, weights, temperatures, data, time.</p>
+          <span class="card-tag">Everyday</span>
+        </div>
+        <div class="feature-card" data-modal="customs" data-reveal>
+          <div class="card-top"><span class="card-number">06</span><span class="card-arrow">↗</span></div>
+          <div class="feature-icon icon-customs">□</div>
+          <h3>Customs duty</h3>
+          <p>Work out a rough landed cost for a parcel.</p>
+          <span class="card-tag">Estimate</span>
+        </div>
+        <div class="feature-card feature-card-accent" data-modal="color" data-reveal>
+          <div class="card-top"><span class="card-number">07</span><span class="card-arrow">↗</span></div>
+          <div class="feature-icon icon-color">●</div>
+          <h3>Color picker</h3>
+          <p>Pick a color and copy its useful codes.</p>
+          <span class="card-tag">Design</span>
+        </div>
+        <div class="feature-card" data-modal="calculator" data-reveal>
+          <div class="card-top"><span class="card-number">08</span><span class="card-arrow">↗</span></div>
+          <div class="feature-icon icon-calculator">＋</div>
+          <h3>Calculator</h3>
+          <p>Quick sums without opening another app.</p>
+          <span class="card-tag">Numbers</span>
+        </div>
+        <div class="feature-card" data-modal="picker" data-reveal>
+          <div class="card-top"><span class="card-number">09</span><span class="card-arrow">↗</span></div>
+          <div class="feature-icon icon-picker">↯</div>
+          <h3>Random picker</h3>
+          <p>Put some options in. Let chance choose.</p>
+          <span class="card-tag">Decide</span>
+        </div>
+        <div class="feature-card" data-modal="habits" data-reveal>
+          <div class="card-top"><span class="card-number">10</span><span class="card-arrow">↗</span></div>
+          <div class="feature-icon icon-habits">×</div>
+          <h3>Habit check</h3>
+          <p>Mark today and keep a small streak going.</p>
+          <span class="card-tag">Routine</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about shell" id="about">
+      <div class="about-rule"></div>
+      <p class="eyebrow">About</p>
+      <div class="about-grid">
+        <h2>Simple tools.<br><em>That’s all.</em></h2>
+        <p>There is no account and no setup. The things you save here use your browser’s local storage. Use what you need, then get back to your day.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Tool</h3>
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close dialog">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><span>Copied!</span></div>
+
+  <footer>
+    <div class="shell footer-inner">
+      <a class="brand" href="#top"><span class="brand-mark">+</span><span>toolbox</span></a>
+      <span>Made for the small jobs.</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
