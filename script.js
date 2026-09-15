@@ -1,4 +1,4 @@
-// --- HERO TYPEWRITER ---
+// Build the two-line heading after the page has loaded.
 const heroTitle = document.getElementById('heroTitle');
 if (heroTitle) {
   const words = ["A few useful", "<br><span class='accent'>tools.</span>"];
@@ -13,7 +13,7 @@ if (heroTitle) {
   });
 }
 
-// --- THEME TOGGLE ---
+// Remember the selected colour theme.
 const themeToggle = document.getElementById('themeToggle');
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
@@ -33,7 +33,7 @@ if (themeToggle) {
   } catch(e) {}
 }
 
-// --- SCROLL PROGRESS ---
+// Keep the thin progress bar in sync with the page scroll position.
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -42,7 +42,7 @@ window.addEventListener('scroll', () => {
   if (progressBar) progressBar.style.width = progress + '%';
 });
 
-// --- SCROLL REVEAL ---
+// Reveal sections as they enter the viewport.
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -70,7 +70,7 @@ document.querySelectorAll('.feature-card[data-modal]').forEach(card => {
   });
 });
 
-// Subtle pointer tilt gives the cards depth without affecting touch devices.
+// Add a little depth on pointer devices. Touch layouts keep their normal shape.
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.matchMedia('(pointer: fine)').matches) {
   document.querySelectorAll('.feature-card').forEach(card => {
     card.addEventListener('pointermove', (e) => {
@@ -91,7 +91,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.mat
   });
 }
 
-// --- INK TRAIL ---
+// Draw the small pointer trail.
 const canvas = document.getElementById('inkTrail');
 if (canvas) {
   const ctx = canvas.getContext('2d');
@@ -132,7 +132,7 @@ if (canvas) {
   animateInk();
 }
 
-// --- TOAST & CONFETTI ---
+// Shared feedback helpers.
 function toast(msg) {
   const t = document.getElementById('toast');
   if (!t) return;
@@ -184,7 +184,7 @@ function fallbackCopy(text, successMsg) {
   document.body.removeChild(ta);
 }
 
-// --- MODAL SYSTEM ---
+// Open and manage tool dialogs.
 const modalOverlay = document.getElementById('modalOverlay');
 const modalTitle = document.getElementById('modalTitle');
 const modalBody = document.getElementById('modalBody');
@@ -412,7 +412,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
 
-// --- TIMER ---
+// Focus timer.
 let timerSec = 1500, timerOrig = 1500, timerInterval = null;
 
 function timerFmt(s) {
@@ -467,7 +467,7 @@ function timerReset() {
   timerRender();
 }
 
-// --- TASKS ---
+// Task list.
 let tasks = [];
 try { tasks = JSON.parse(localStorage.getItem('tasks') || '[]'); } catch(e) {}
 
@@ -527,7 +527,7 @@ function clearDone() {
   toast('Cleared');
 }
 
-// --- NOTES ---
+// Notes editor.
 function loadNotes() {
   const area = document.getElementById('notesArea');
   if (!area) return;
@@ -554,7 +554,7 @@ function clearNotes() {
   }
 }
 
-// --- PASSWORD ---
+// Password generator.
 let lastPw = '';
 
 function genPassword() {
@@ -611,7 +611,7 @@ function copyPassword() {
   copyToClipboard(lastPw, 'Copied');
 }
 
-// --- CONVERTER ---
+// Unit converter.
 const units = {
   length: {m:1, km:1000, cm:0.01, mm:0.001, mi:1609.34, ft:0.3048, 'in':0.0254},
   weight: {kg:1, g:0.001, mg:0.000001, lb:0.453592, oz:0.0283495, t:1000},
@@ -661,7 +661,7 @@ function convCalc() {
   res.classList.add('updated');
 }
 
-// --- CUSTOMS ---
+// Customs estimate.
 const countryVat = { us: 0, uk: 20, eu: 21, in: 18, cn: 13, au: 10, ca: 5, br: 17, ae: 5, custom: 0 };
 const categoryDuty = { general: 5, electronics: 3, clothing: 15, food: 10, luxury: 25, automotive: 8, books: 0, custom: 0 };
 
@@ -709,7 +709,7 @@ function calcCustoms() {
     <div class="duty-row total"><span class="label">Total Landed Cost</span><span class="value">$${total.toFixed(2)}</span></div>`;
 }
 
-// --- COLOR ---
+// Colour picker.
 function updateColor(v) {
   if (!/^#[0-9a-fA-F]{6}$/.test(v)) return;
 
@@ -751,7 +751,7 @@ function copyVal(text) {
 }
 
 
-// 3D scene parallax
+// Move the main page layers slightly with the pointer.
 (() => {
   const sceneTargets = [document.querySelector('.hero'), document.querySelector('.features')].filter(Boolean);
   const finePointer = window.matchMedia('(pointer: fine)').matches;
@@ -780,7 +780,7 @@ function copyVal(text) {
 })();
 
 
-// Real 3D background scene
+// Draw the background scene on a canvas.
 (() => {
   const canvas = document.getElementById('scene3d');
   if (!canvas) return;
@@ -988,7 +988,7 @@ function copyVal(text) {
 })();
 
 
-// Navigation and interaction polish
+// Keep breadcrumbs and interaction status up to date.
 (() => {
   const breadcrumbCurrent = document.getElementById('breadcrumbCurrent');
   const breadcrumbStatus = document.getElementById('breadcrumbStatus');
@@ -1053,7 +1053,7 @@ function copyVal(text) {
 })();
 
 
-// Additional tools
+// Calculator, random picker, and habit tracker.
 let calculatorValue = '';
 let calculatorStored = null;
 let calculatorOperator = null;
@@ -1163,7 +1163,7 @@ function resetHabit() {
 }
 
 
-// Deep links: /?tool=timer opens a tool directly and supports back/forward.
+// Restore a tool from the URL and keep browser history working.
 (() => {
   const validTools = new Set(['timer', 'tasks', 'notes', 'password', 'converter', 'customs', 'color', 'calculator', 'picker', 'habits']);
 
@@ -1186,3 +1186,4 @@ function resetHabit() {
     openFromUrl();
   }
 })();
+
