@@ -1877,12 +1877,12 @@ body.dark {
   --muted: #a8b6ba;
   --line: #40515b;
   --red: #78c8c0;
-  --green: #dfbd70;
+  --green: #9cc7bd;
   --violet: #9088c5;
   --coral: #c98279;
   --sky: #79b4c5;
   --mint: #83b99b;
-  --sun: #d7b867;
+  --sun: #91b5c0;
   --deep: #091016;
   --scene-shadow: rgba(0, 0, 0, 0.48);
   background: var(--paper);
@@ -1974,7 +1974,7 @@ body.dark .features {
 }
 
 body.dark .features::before {
-  background: #4b405d;
+  background: #344550;
 }
 
 body.dark .feature-card {
