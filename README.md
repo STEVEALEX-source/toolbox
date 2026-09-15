@@ -60,7 +60,3 @@ script.js    tools and interactions
 The project is currently a static frontend. Data does not sync between devices yet.
 
 The customs tool gives a rough estimate only and should not be treated as official tax or customs advice.
-
-## License
-
-Add a license before publishing if you want other people to reuse the code.
