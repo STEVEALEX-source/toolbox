@@ -866,7 +866,7 @@ body.modal-open {
   animation-fill-mode: forwards !important;
 }
 
-/* UI refinement */
+/* Small interface refinements. */
 :root {
   --shadow-soft: 5px 6px 0 rgba(32, 49, 59, 0.13);
   --shadow-hover: 8px 9px 0 rgba(32, 49, 59, 0.16);
@@ -1124,7 +1124,7 @@ footer .brand {
   }
 }
 
-/* New app layout */
+/* Main application layout. */
 .hero {
   min-height: 590px;
   padding-top: 70px;
@@ -1245,7 +1245,7 @@ footer .brand {
   }
 }
 
-/* Interactive 3D interface */
+/* Depth and pointer interaction for the interface. */
 :root {
   --violet: #b5a7e8;
   --coral: #efa99d;
@@ -1562,7 +1562,7 @@ footer {
   }
 }
 
-/* Real 3D background canvas */
+/* Canvas background placement. */
 #scene3d {
   position: fixed;
   inset: 0;
@@ -1618,7 +1618,7 @@ footer {
   }
 }
 
-/* Breadcrumbs and loading feedback */
+/* Breadcrumbs and loading feedback. */
 .breadcrumbs {
   display: flex;
   align-items: center;
@@ -1687,7 +1687,7 @@ footer {
   }
 }
 
-/* Additional tools and skeleton loader */
+/* Styles for the extra tools and skeleton state. */
 .modal-skeleton {
   position: absolute;
   inset: 24px;
@@ -1834,7 +1834,7 @@ footer {
   }
 }
 
-/* More scene objects */
+/* Additional background scene details. */
 #scene3d {
   opacity: 0.86;
 }
@@ -1868,7 +1868,7 @@ footer {
   padding: 4px;
 }
 
-/* Dark mode polish */
+/* First dark theme pass. */
 body.dark {
   --paper: #17242b;
   --paper-light: #24343b;
@@ -2082,7 +2082,7 @@ body.dark .breadcrumb-status {
   border-color: var(--green);
 }
 
-/* Dark mode correction */
+/* Final dark theme adjustments. */
 body.dark {
   --paper: #111820;
   --paper-light: #1b2630;
@@ -2337,4 +2337,3 @@ body.dark .toast {
   border-color: var(--red);
   box-shadow: 4px 4px 0 var(--green);
 }
-         
