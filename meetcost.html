@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Meeting cost · Toolbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tool-page" data-tool="meetcost">
+  <header class="site-header">
+    <a class="brand" href="index.html">toolbox</a>
+    <nav class="main-nav">
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#about">About</a>
+      <button class="theme-toggle" id="themeToggle" type="button" title="Toggle theme" aria-label="Toggle theme">Dark</button>
+    </nav>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="crumb-sep" aria-hidden="true">/</span>
+    <a href="index.html#tools">Tools</a>
+    <span class="crumb-sep" aria-hidden="true">/</span>
+    <span class="current">Meeting cost</span>
+  </nav>
+
+  <main class="tool-main">
+    <div class="tool-page-head">
+      <h1>Meeting cost</h1>
+      <p class="tool-page-desc">People times rate times minutes.</p>
+    </div>
+    <div class="tool-panel" id="toolRoot">
+<p class="tool-hint">Rough cost only. Useful when the invite is light and the room is full.</p><label for="meetPeople">People in the room</label><input type="number" id="meetPeople" min="1" value="4"><label for="meetRate">Avg hourly rate (your currency)</label><input type="number" id="meetRate" min="0" value="40"><label for="meetMins">Length (minutes)</label><input type="number" id="meetMins" min="5" value="30"><div class="btn-row"><button class="btn primary" type="button" id="meetCalc">Estimate</button></div><div class="convert-result" id="meetResult">Press estimate.</div>
+    </div>
+    <p class="tool-back"><a href="index.html#tools">All tools</a></p>
+  </main>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>toolbox</span>
+      <span>runs in your browser</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

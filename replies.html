@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Reply debt · Toolbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tool-page" data-tool="replies">
+  <header class="site-header">
+    <a class="brand" href="index.html">toolbox</a>
+    <nav class="main-nav">
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#about">About</a>
+      <button class="theme-toggle" id="themeToggle" type="button" title="Toggle theme" aria-label="Toggle theme">Dark</button>
+    </nav>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="crumb-sep" aria-hidden="true">/</span>
+    <a href="index.html#tools">Tools</a>
+    <span class="crumb-sep" aria-hidden="true">/</span>
+    <span class="current">Reply debt</span>
+  </nav>
+
+  <main class="tool-main">
+    <div class="tool-page-head">
+      <h1>Reply debt</h1>
+      <p class="tool-page-desc">People you still owe a message.</p>
+    </div>
+    <div class="tool-panel" id="toolRoot">
+<p class="tool-hint">Outbound guilt. People you still need to answer.</p><label for="replyWho">Owe a reply to</label><input type="text" id="replyWho" placeholder="Sam, client, mum..."><label for="replyAbout">About</label><input type="text" id="replyAbout" placeholder="Their question, that email..."><label for="replySince">Since</label><input type="date" id="replySince"><div class="btn-row"><button class="btn primary" type="button" id="replyAdd">Add</button></div><div id="replyList"></div>
+    </div>
+    <p class="tool-back"><a href="index.html#tools">All tools</a></p>
+  </main>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>toolbox</span>
+      <span>runs in your browser</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

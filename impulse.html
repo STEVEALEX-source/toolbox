@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Impulse lock · Toolbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tool-page" data-tool="impulse">
+  <header class="site-header">
+    <a class="brand" href="index.html">toolbox</a>
+    <nav class="main-nav">
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#about">About</a>
+      <button class="theme-toggle" id="themeToggle" type="button" title="Toggle theme" aria-label="Toggle theme">Dark</button>
+    </nav>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="crumb-sep" aria-hidden="true">/</span>
+    <a href="index.html#tools">Tools</a>
+    <span class="crumb-sep" aria-hidden="true">/</span>
+    <span class="current">Impulse lock</span>
+  </nav>
+
+  <main class="tool-main">
+    <div class="tool-page-head">
+      <h1>Impulse lock</h1>
+      <p class="tool-page-desc">Name the thing you want to buy. It stays locked for a set time.</p>
+    </div>
+    <div class="tool-panel" id="toolRoot">
+<p class="tool-hint">Want to buy something? Lock it. Come back when the timer is done.</p><label for="impulseItem">What do you want</label><input type="text" id="impulseItem" placeholder="Headphones, course, jacket..."><label for="impulseDays">Lock for (days)</label><select id="impulseDays"><option value="1">1 day</option><option value="2" selected>2 days</option><option value="3">3 days</option><option value="7">7 days</option></select><div class="btn-row"><button class="btn primary" type="button" id="impulseAdd">Lock it</button></div><div id="impulseList"></div>
+    </div>
+    <p class="tool-back"><a href="index.html#tools">All tools</a></p>
+  </main>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>toolbox</span>
+      <span>runs in your browser</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

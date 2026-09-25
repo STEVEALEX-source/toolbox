@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Converter · Toolbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tool-page" data-tool="converter">
+  <header class="site-header">
+    <a class="brand" href="index.html">toolbox</a>
+    <nav class="main-nav">
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#about">About</a>
+      <button class="theme-toggle" id="themeToggle" type="button" title="Toggle theme" aria-label="Toggle theme">Dark</button>
+    </nav>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="crumb-sep" aria-hidden="true">/</span>
+    <a href="index.html#tools">Tools</a>
+    <span class="crumb-sep" aria-hidden="true">/</span>
+    <span class="current">Converter</span>
+  </nav>
+
+  <main class="tool-main">
+    <div class="tool-page-head">
+      <h1>Converter</h1>
+      <p class="tool-page-desc">cm to inches, C to F, that kind of thing.</p>
+    </div>
+    <div class="tool-panel" id="toolRoot">
+<label for="convType">Type</label><select id="convType"><option value="length">Length</option><option value="weight">Weight</option><option value="temp">Temperature</option><option value="data">Data</option><option value="time">Time</option></select><div class="convert-row"><input type="number" id="convIn" placeholder="Value" value="1"><select id="convFrom"></select><select id="convTo"></select></div><div class="convert-result" id="convResult">1</div>
+    </div>
+    <p class="tool-back"><a href="index.html#tools">All tools</a></p>
+  </main>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>toolbox</span>
+      <span>runs in your browser</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

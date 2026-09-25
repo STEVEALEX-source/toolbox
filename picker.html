@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Random pick · Toolbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tool-page" data-tool="picker">
+  <header class="site-header">
+    <a class="brand" href="index.html">toolbox</a>
+    <nav class="main-nav">
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#about">About</a>
+      <button class="theme-toggle" id="themeToggle" type="button" title="Toggle theme" aria-label="Toggle theme">Dark</button>
+    </nav>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="crumb-sep" aria-hidden="true">/</span>
+    <a href="index.html#tools">Tools</a>
+    <span class="crumb-sep" aria-hidden="true">/</span>
+    <span class="current">Random pick</span>
+  </nav>
+
+  <main class="tool-main">
+    <div class="tool-page-head">
+      <h1>Random pick</h1>
+      <p class="tool-page-desc">When you cannot decide between a few options.</p>
+    </div>
+    <div class="tool-panel" id="toolRoot">
+<label for="pickerOptions">Options (one per line)</label><textarea id="pickerOptions" placeholder="Option A
+Option B
+Option C"></textarea><div class="btn-row"><button class="btn primary" type="button" id="pickerGo">Pick one</button><button class="btn" type="button" id="pickerClear">Clear</button></div><div class="picker-result" id="pickerResult">Add a few options first.</div>
+    </div>
+    <p class="tool-back"><a href="index.html#tools">All tools</a></p>
+  </main>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>toolbox</span>
+      <span>runs in your browser</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
